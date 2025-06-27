@@ -34,7 +34,7 @@ int primMST () {
         inMST[u] = 1;
 
         for (int v = 0; v < N; v++) {
-            if (m[u][v] && !inMST[v] && m[v][u] < key[v]) {
+            if (m[u][v] && !inMST[v] && m[u][v] < key[v]) {
                 key[v] = m[v][u];
                 parent[v] = u;
             }
